@@ -1,7 +1,6 @@
 import streamlit as st
 import spacy
 from sklearn.tree import DecisionTreeClassifier
-import numpy as np
 import speech_recognition as sr
 import json
 from datetime import datetime
@@ -212,7 +211,6 @@ def get_audio_input():
 
 import streamlit as st
 import joblib
-import numpy as np
 from vosk import Model, KaldiRecognizer
 import pyaudio
 from groq import Groq  # Hypothetical GroqLLM package
