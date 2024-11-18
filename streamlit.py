@@ -236,7 +236,7 @@ if "analysis" not in st.session_state:
     st.session_state.analysis = []
 
 # Initialize Vosk STT Model (Ensure the model is downloaded)
-vosk_model = Model("C:/Users/adity/ISWAD/AI Job Interview APP/shared/storage/STT Vosk Models/vosk-model-small-en-us-0.15")  # Path to your Vosk STT model directory
+#vosk_model = Model("C:/Users/adity/ISWAD/AI Job Interview APP/shared/storage/STT Vosk Models/vosk-model-small-en-us-0.15")  # Path to your Vosk STT model directory
 #recognizer = KaldiRecognizer(vosk_model, 16000)
 recognizer = sr.Recognizer()
 
