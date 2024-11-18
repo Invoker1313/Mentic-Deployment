@@ -211,6 +211,8 @@ def suicidal_check(user_speech):
 #            st.error(f"Could not request results; {e}")
 #    return None
 
+import sounddevice
+import numpy
 
 def get_audio_input():
     Record audio using sounddevice and transcribe it with SpeechRecognition.
