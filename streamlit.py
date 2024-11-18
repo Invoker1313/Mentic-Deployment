@@ -7,7 +7,7 @@ from datetime import datetime
 from spacy.cli import download
 
 # Download the en_core_web_md model
-download("en_core_web_md")
+#download("en_core_web_md")
 # Load spaCy model
 
 nlp = spacy.load('en_core_web_md')
