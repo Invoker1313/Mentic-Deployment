@@ -6,3 +6,4 @@ vosk
 groq
 sounddevice
 numpy
+pyaudio
