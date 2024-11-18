@@ -1,0 +1,4 @@
+sckit-learn
+SpeechRecognition
+numpy
+spacy
