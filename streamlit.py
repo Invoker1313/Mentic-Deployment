@@ -215,7 +215,7 @@ import sounddevice
 import numpy
 
 def get_audio_input():
-    Record audio using sounddevice and transcribe it with SpeechRecognition.
+    #Record audio using sounddevice and transcribe it with SpeechRecognition.
     recognizer = sr.Recognizer()
     st.info("Recording... Speak into the microphone.")
 
