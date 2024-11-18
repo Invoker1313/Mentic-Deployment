@@ -4,3 +4,4 @@ SpeechRecognition
 spacy
 vosk
 groq
+PyAudio
