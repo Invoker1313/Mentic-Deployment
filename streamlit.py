@@ -199,49 +199,18 @@ def suicidal_check(user_speech):
                 suicidal_counter = suicidal_counter + 1
         return suicidal_counter
         
-#def get_audio_input():
-#    with sr.Microphone() as source:
-#        audio = recognizer.listen(source)
-#        try:
-#            text = recognizer.recognize_google(audio)
-#            return text
-#        except sr.UnknownValueError:
-#            st.error("Could not understand the audio")
-#        except sr.RequestError as e:
-#            st.error(f"Could not request results; {e}")
-#    return None
-
-import sounddevice
-import numpy
-
 def get_audio_input():
-    #Record audio using sounddevice and transcribe it with SpeechRecognition.
-    recognizer = sr.Recognizer()
-    st.info("Recording... Speak into the microphone.")
-
-    # Record audio with sounddevice
-    duration = 5  # Duration in seconds
-    try:
-        # Record audio using sounddevice
-        audio_data = sd.rec(int(duration * 16000), samplerate=16000, channels=1, dtype='int16')
-        sd.wait()  # Wait until recording is complete
-
-        # Convert recorded audio to WAV format
-        audio_data = (audio_data * (2**15)).astype(np.int16)  # Scale to 16-bit PCM
-        wav_audio = sr.AudioData(audio_data.tobytes(), 16000, 2)
-
-        # Recognize audio with Google Web Speech API
+    with sr.Microphone() as source:
+        audio = recognizer.listen(source)
         try:
-            text = recognizer.recognize_google(wav_audio)
+            text = recognizer.recognize_google(audio)
             return text
         except sr.UnknownValueError:
-            st.error("Could not understand the audio.")
+            st.error("Could not understand the audio")
         except sr.RequestError as e:
-            st.error(f"Could not request results from Google Speech Recognition; {e}")
-
-    except Exception as e:
-        st.error(f"An error occurred: {e}")
+            st.error(f"Could not request results; {e}")
     return None
+
 
 # Define each symptom check function (from initial code)
 
