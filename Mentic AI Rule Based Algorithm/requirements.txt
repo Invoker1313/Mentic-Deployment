@@ -1,5 +1,5 @@
 streamlit
 spacy
-sklearn
+scikit-learn
 numpy
 SpeechRecognition
