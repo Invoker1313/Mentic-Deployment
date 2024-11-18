@@ -3,5 +3,4 @@ scikit-learn
 SpeechRecognition
 spacy
 vosk
-pyaudio
 groq
