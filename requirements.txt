@@ -1,5 +1,4 @@
-numpy==1.22.0
-pandas==1.4.2
-scikit-learn==1.1.1
+pandas
+scikit-learn
 SpeechRecognition
 spacy
