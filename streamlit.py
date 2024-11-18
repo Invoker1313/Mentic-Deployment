@@ -216,7 +216,7 @@ def get_audio_input():
 import streamlit as st
 import joblib
 from vosk import Model, KaldiRecognizer
-import pyaudio
+#import pyaudio
 from groq import Groq  # Hypothetical GroqLLM package
 GroqAPIKey = "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"
 GroqClient = Groq(api_key = GroqAPIKey)
