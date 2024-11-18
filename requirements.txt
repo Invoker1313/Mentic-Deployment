@@ -1,4 +1,4 @@
-sckit-learn
+scikit-learn
 SpeechRecognition
 numpy
 spacy
