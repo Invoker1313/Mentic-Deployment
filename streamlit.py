@@ -10,7 +10,13 @@ from spacy.cli import download
 #download("en_core_web_md")
 # Load spaCy model
 
-nlp = spacy.load('en_core_web_md')
+#nlp = spacy.load('en_core_web_md')
+# Ensure the model is downloaded
+try:
+    nlp = spacy.load("en_core_web_md")
+except OSError:
+    download("en_core_web_md")
+    nlp = spacy.load("en_core_web_md")
 
 #global depressed_mood_counter, anhedonia_counter
 #global appetite_counter, insomnia_counter
