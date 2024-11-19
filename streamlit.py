@@ -246,10 +246,10 @@ st.title("Depression Severity Checker with Conversational LLM")
 
 # Button to start/stop recording
 if st.session_state.is_recording:
-    if st.button("Stop Recording"):
+    if st.button("Stop Conversation"):
         st.session_state.is_recording = False
 else:
-    if st.button("Start Recording"):
+    if st.button("Start Conversation"):
         st.session_state.is_recording = True
 
 # Recording Functionality
@@ -305,7 +305,7 @@ else:
 
     # Use the microphone to get user input
     if st.session_state.is_recording:
-        user_text = get_audio_input()
+        user_text = st.text_input("Type Here!")
         if user_text:
             st.success(f"You Said: {user_text}")
             st.session_state.conversation_context.append({"role": "user", "content": user_text})
